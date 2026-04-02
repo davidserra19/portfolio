@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Sr Solutions Engineer</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="pictures/cart_pole.gif" alt="Cartpole" class="hero-image" />
+
+    <h2>Deep Q-Network (DQN) - Cartpole Control Experiment</h2>
+    <p>This project demonstrates a Deep Q-Network(DQN) applied to the Cartpole-v1 
+      environment from the OpenAI Gym, where the goal is to balance a pole on a moving cart
+      by learning optimal actions through trial and error. The objective is to explore and
+      understand the principles of a deep learning environment, specifically the use of neural
+      approximators for Q-learning.
+    </p>
+
+    <h2>Overview</h2>
+    <p> This DQN combines Q-learning with deep neural networks, experience replay, and a target 
+      network to address the instability and divergence issues that arise when applying function 
+      approximation to reinforcement learning. The agent is passed information about the current state
+      of the environment, which includes the position and velocity of the cart and pole, and learns to 
+      take either move left or right to keep the pole balanced. It does this by estimating the Q-value or
+      estimated future rewards for each action of a given state and choosing the action with the highest
+      estimated reward.
+  
+    </p>
+
+    <h2>Implementation Details</h2>
+    <p> At each step the agent
+
+    </p>
+
+    <h2>Training procedure</h2>
+    <p>
+
+    </p>
+
+    <h2>Evaluation</h2>
+    <p> Performance is measured by average episode rewards over time. The environment is considered
+       "sovled" when the mean reward execeeds 475 over 100 consecutive episodes (95% of total score
+        of 500)
+
+    </p>
+    
+    <h2>Actual State</h2>
+    <p> Currently the model suffers from catastrophic forgetting where it will make progress in 
+      learning and have consecutive episodes with an average reward of 500. After more runs, it 
+      will rely on bad replays and reset learning progress. Currently there is leakage between the 
+      replay buffer and the main network that causes it to fail. In the future, I will implement
+      a target network to address this issue and will also implement a more robust replay buffer that
+      will not allow bad replays to be used for learning.
+    </p>
+    <img src="pictures/Cartpole-v1 Results.png" alt="Cartpole_Graph" class="hero-image" />
+
+  </section>
