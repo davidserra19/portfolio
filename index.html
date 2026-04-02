@@ -13,9 +13,8 @@
     <nav class="navbar">
       <h1 class="logo">Sr Solutions Engineer</h1>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">Info</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -39,20 +38,36 @@
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>Located in Boulder, CO</p>
-    <p>Currently exploring new opportunities</p>
-    <p> 
-      cell: (770) 378-8286 email: daserra98@gmail.com
-    </p>
+    <h2>Info</h2>
+    <div class="contact-container">
+
+      
+      <a href="https://www.linkedin.com/in/davidserrauga/" class="contact-link phone">
+        <span class="icon">🔗</span> LinkedIn
+      </a>
+     
+      <a href="tel:+17703788286" class="contact-link phone">
+        <span class="icon">📞</span> (770) 378-8286
+      </a>
+
+      <a href="mailto:daserra98@gmail.com" class="contact-link email">
+        <span class="icon">📧</span> daserra98@gmail.com
+      </a>
+    </div>
   </section>
 
   <!-- TOOLS -->
   <section id="tools" class="section">
     <h2>Tools</h2>
-    <p>
-      List of tools and technologies you're proficient in.
-    </p>
+    <p>Experience working with a variety of tools and technologies including but not limited to:</p>
+    <section class="list-unordered">
+      <ul>
+        <li><b>Python Libraries:</b> Pandas, Numpy, Scikit-learn, Tensorflow, PyTorch</li>
+        <li><b>Cloud & Infrastructure:</b> AWS</li>
+        <li><b>Data Pipelines:</b> Databricks, Snowflake, Apache Spark, MWAA Airflow</li>
+        <li><b>Data Storage & Transfer:</b> S3, SFTP</li>
+        <li><b>Database & Analysis:</b> MySQL, Athena</li>
+      </ul>
   </section>
 
   <!-- PROJECTS -->
@@ -60,19 +75,19 @@
     <h2>Projects</h2>
     <div class="projects-container">
       <div class="project-card">
-        <h3>Project 1</h3>
-        <p>Short description</p>
-        <a href="#">View</a>
+        <h3>SQL for Datascience</h3>
+        <p>Used SQL to analyze linkage data and identify overmatching issues</p>
+        <a href="sql-for-datascience.html" class="link-button">View</a>
       </div>
       <div class="project-card">
         <h3>CartPole Machine Learning</h3>
         <p>Training a reinforcement learning agent to balance an inverted pendulum</p>
-        <a href="cartpole.html">View</a>
+        <a href="cartpole.html" class="link-button">View</a>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT
   <section id="contact" class="section">
     <h2>Contact</h2>
     <form id="contact-form">
@@ -82,6 +97,7 @@
       <button type="submit">Send</button>
     </form>
   </section>
+  -->
 
   <footer>
     <p>© 2026 David Serra</p>
