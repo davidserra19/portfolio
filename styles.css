@@ -55,6 +55,132 @@ body {
   border-radius: 10px;
 }
 
+/* Various Lists */
+.list-unordered {
+  max-width: 600px;     
+  margin: 0 auto;       
+  text-align: left; 
+}
+
+.list-unordered ul {
+  list-style: none;     
+  padding: 0;           
+  margin: 0;
+}
+
+.list-ordered {
+  max-width: 600px;     
+  margin: 0 auto;       
+  text-align: left;
+  place-items: center;
+}
+
+.list-ordered ul {
+  list-style: decimal;
+  padding: 0;
+  margin: 0;
+}
+
+/* Phone + Email Style */
+.phone {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1.2em;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1.2em;
+  color: darkblue;
+  font-weight: bold;
+}
+
+/* Code Style */
+.python-code {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: auto;
+}
+
+.sql-code {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: auto;
+}
+
+/* Contact Container Style */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  /* Minimum touch target size for mobile accessibility */
+  min-height: 44px; 
+}
+
+/* Specific colors for visual distinction */
+.phone {
+  background-color: #4B5320;
+  color: white;
+  border: 1px solid black;
+}
+
+.email {
+  background-color: #4B5320;
+  color: white;
+  border: 1px solid black;
+}
+
+.linkedin {
+  background-color: #4B5320;
+  color: white;
+  border: 1px solid black;
+}
+
+.link-button {
+  background-color: #4B5320;
+  color: white;
+  border: 1px solid black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Interactive hover states */
+.contact-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  opacity: 0.9;
+}
+
+.icon {
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+
 form {
   display: flex;
   flex-direction: column;
@@ -76,3 +202,4 @@ footer {
   background: #111;
   color: white;
 }
+

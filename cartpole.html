@@ -11,11 +11,10 @@
   <!-- NAVBAR -->
   <header>
     <nav class="navbar">
-      <h1 class="logo">Sr Solutions Engineer</h1>
+      <h1 class="logo">CartPole Machine Learning</h1>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
       </ul>
     </nav>
   </header>
@@ -44,12 +43,28 @@
     </p>
 
     <h2>Implementation Details</h2>
-    <p> At each step the agent
-
-    </p>
-
+    <section class="list-unordered">
+      <ul>
+        <li><strong>Environment:</strong> gymnasium.make("CartPole-v1")</li>
+        <li><strong>State:</strong> Continuous state vector for cart position, cart velocity, pole angle, and pole velocity at tip</li>
+        <li><strong>Action Space:</strong> Discrete (move left or right)</li>
+        <li><strong>Reward Signal:</strong> +1 for each time step the pole remains upright (max 500 steps)</li>
+        <li><strong>Exploration Strategy:</strong> Epsilon-greedy policy with exponential decay</li>
+      </ul>
+    </section>
+      
     <h2>Training procedure</h2>
-    <p>
+    <p>At each step the agent:</p>
+    <section class="list-ordered">
+      <ul>
+        <li>Selects an action based on the epsilon-greedy policy</li>
+        <li>Executes the action and stores the resulting state</li>
+        <li>Sample a random batch from the replay buffer</li>
+        <li>Updates the Q-network weights via stochastic gradient descent</li>
+        <li>Periodically sychronize weights to the target network</li>
+      </ul>
+    </section>
+    <p> 
 
     </p>
 

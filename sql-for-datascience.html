@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Linkage Data Overmatching</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Data Quality Analysis for Hashed Email to MAID Linkage</h2>
+
+    <h2>Background</h2>
+    <p> 
+      Several data buyers reached out regarding inaccuracies and overmatching of our data. The dataset they were inquiring about
+      was Hashed Email to Mobile Advertising ID (MAID) linkage and in this case, overmatching meant that the same MAID was being 
+      linked to 10 to 12 different MAIDs. Since a MAID is supposed to represent a single device and be deterministic, this would
+      indicate that on average the same email address was being linked to 10 to 12 different MAIDs. This was a problem because 
+      while running ad campaigns, such high matches lead to low performance and lost the partner revenue. This led them to question
+      the accuracy and value of our data
+    </p>
+    <p>
+        To create this dataset, we were ingesting linkage data from partners, enriching it with signals from our ad exchange and 
+        transforming it into into a new product used for targeted marketing and advertising. Data was being ingested from more than 50
+        partners and there was no alerting regarding the quality of the data being ingested, so finding the dirty data would be a challenge.
+    </p>
+
+    <h2>Approach</h2>
+    <p>
+        While there was no active reporting, all of the data lived in a Snowflake data warehouse and could be queried using SQL. 
+        Using queries, I was able to create a report that showed 1) Total number of Hashed Email to MAID linkages, 2) Number of 
+        unique, distinct pairs delivered, 3) Percentage overlap of linkages that matched with other partners, and 4) A breakdown of
+        revenue earned by each partner/buyer intersection.
+    </p>
+
+    <h2>Results</h2>
+    <p>
+        By running this report, I was able to identify that the majority of the overmatching was being caused by 10% of data providers
+        and was able to temporarily removing these providers from the dataset while I worked with them to tweak the parameters they used
+        to provide us data. Removing these providers from the dataset led to an immediate, significant increase in performance of ad campaigns
+        from the partner that was purchasing data from us and an increase in revenue for our company. After working with our suppliers and resolving
+        the issues, we were able to reintegrate the data and performance remained high.
+    </p>
+    <p>
+        Most importantly, this project led to the creation of active reporting that could be used to flag and omit data not compliant with 
+        our quality standards and allowed us to maintain the integrity of our data and the performance of our products. I led scoping efforts with product
+        and engineering to create an automated version of the reports I put together during this project.
+    
+    </p>
+
+  </section>
